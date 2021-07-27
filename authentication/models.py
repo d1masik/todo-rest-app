@@ -44,6 +44,7 @@ class User(AbstractUser):
     first_name = models.CharField(_('first name'), max_length=150, blank=True, validators=[first_name_validator])
     last_name = models.CharField(_('last name'), max_length=150, blank=True, validators=[last_name_validator])
 
+    password = models.CharField(_('password'), max_length=16)
 
     objects = EmailUserManager()
 
