@@ -24,7 +24,6 @@ class FirstCapitalLetterValidator:
 
 class PasswordRegexValidator:
     def validate(self, password, user=None):
-        print(password)
         if not re.search(r'^[a-zA-Z0-9_]*$', password):
             raise ValidationError(
                 _("Only digits and letters"),
@@ -69,7 +68,7 @@ class ExcludeEmailValidator(validators.EmailValidator):
             raise ValidationError(self.message, code=self.code, params={'value': value})
 
 
-last_name_validator = RegexValidator(r'^[a-zA-Z0-9_]*$')
+last_name_validator = RegexValidator(r'^[A-Za-zА-Яа-я]*$')
 
-first_name_validator = RegexValidator('[A-Za-zА-Яа-я ]*$')
+first_name_validator = RegexValidator(r'^[A-Za-zА-Яа-я ]*$')
 
