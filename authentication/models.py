@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import UserManager
-from authentication.validators import ExcludeEmailValidator, first_name_validator, last_name_validator, password_character_validator
+from authentication.validators import ExcludeEmailValidator, first_name_validator, last_name_validator
 
 
 class EmailUserManager(BaseUserManager):
